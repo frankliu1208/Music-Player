@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+body{
+	
+	background: url(../img/bg.jpg);
+	background-size: cover;
+}
+
+
+.banner{
+	width: 960px;
+	height: 250px;
+	background: url(../img/m_bg.jpg) no-repeat;
+	margin: 80px;
+	opacity: 0.8;
+	box-shadow: 10px 15px 15px 1px black;
+	position: relative;
+}
+
+.banner ul li{
+	list-style: none;
+	display: inline-block;
+	position: absolute;   	/*compared to father element, use absolute positioning */
+	
+}
+
+.banner ul li img{
+	border-radius: 50%;
+	cursor: pointer;
+	position: absolute;  
+}
+
+.m1{
+	top: 30px;
+	left: 90px;	
+}
+.m2{
+	top: 140px;
+	left: 160px;	
+}
+.m3{
+	top: 67px;
+	left: 308px;	
+}
+.m4{
+	top: 50px;
+	left: 500px;	
+}
+.m5{
+	top: 160px;
+	left: 580px;	
+}
+
+
+@keyframes img_rotate{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+.banner .img_rotate{
+	animation: img_rotate 2s infinite linear;
+	
+}
+
+
+/*  player  */
+.music{
+	width: 550px;
+	height: 120px;
+	background: black;
+	position: fixed;
+	left:0px;
+	bottom:50px;
+	opacity:0.8;
+	box-shadow: 10px 15px 15px 1px black; 
+
+}
+
+.music .m_img{
+	
+	margin-top: 15px;
+	margin-left: 10px;
+	float: left;
+	
+}
+
+.music .m_text{
+	
+	float: left;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 50px;
+	margin-left: 20px;
+	
+}
+
+
+.music .m_btn{
+	float: left;
+	position: absolute;
+	left: 300px;
+	
+}
+
+
+
+.music .m_btn a{
+	float: left;
+	width: 35px;
+	height: 35px;
+	background: url(../mp3/player%20interface.PNG);
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+
+.music .m_btn .m_prev{background-position: -206px -631px;}
+.music .m_btn .m_prev:hover {background-position: -206px -631px;}
+
+.music .m_btn .m_play{background-position: -431px -631px;}
+.music .m_btn .m_play:hover{background-position: -431px -631px;}
+
+.music .m_btn .m_next{background-position: -363px -631px;}
+.music .m_btn .m_next:hover{background-position: -363px -631px;}
+
+.music .m_close{
+	float: right;
+	background: url(../mp3/player%20interface.PNG);
+	width: 23px;
+	height: 120px;
+	margin-top: -18px;
+	cursor: pointer; 
+	
+}
+
+
+.music .m_btn .m_pause{background-position: -285px -632px;}
+
+
+.music .m_open{background-position: -116px -229px;}
