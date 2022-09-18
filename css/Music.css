@@ -1,35 +1,45 @@
 @charset "utf-8";
 
+
+/* set the background picture */
 body{
 	
-	background: url(../img/bg.jpg);
-	background-size: cover;
+	background: url(../img/bg.jpg);  /* change dynamically the code using jQuery */
+	background-size: cover;   /* self adjustable */
 }
 
-
+/* set background pic for the banner  */
+/* box shadow  means the shadow around the pic */
 .banner{
 	width: 960px;
 	height: 250px;
 	background: url(../img/m_bg.jpg) no-repeat;
-	margin: 80px;
-	opacity: 0.8;
+	margin-top: 80px;
+	margin: left 20px;
+	opacity: 0.6;
 	box-shadow: 10px 15px 15px 1px black;
-	position: relative;
+	position: relative;     /*  relative position for banner's child element */
 }
 
+/* set the list of the banner(means 5 pics),  list style none:  means cancel the list style,  then the pic can move */
 .banner ul li{
 	list-style: none;
-	display: inline-block;
+	display: inline-block;   /*  block element in one line */
 	position: absolute;   	/*compared to father element, use absolute positioning */
 	
 }
 
+
+/* design the 5 pics */
 .banner ul li img{
 	border-radius: 50%;
-	cursor: pointer;
+	/*  mouse will change to hand shape  */
+	cursor: pointer;   
 	position: absolute;  
 }
 
+
+/* change the position of first pic in the banner */
 .m1{
 	top: 30px;
 	left: 90px;	
@@ -52,18 +62,22 @@ body{
 }
 
 
+
+/*  rotate the pic  */
 @keyframes img_rotate{
-	from{transform: rotate(0deg);}
-	to{transform: rotate(360deg);}
+	from { ransform: rotate(0deg);}
+	to { transform: rotate(360deg);}
 }
 
-.banner .img_rotate{
-	animation: img_rotate 2s infinite linear;
+
+/*  time and times of the animation,  refer to the img_rotate  */
+.banner .img_rotate {
+	animation:  img_rotate 2s infinite linear;
 	
 }
 
 
-/*  player  */
+/*  music section ,  position fixed means related to the browser  */
 .music{
 	width: 550px;
 	height: 120px;
@@ -76,14 +90,18 @@ body{
 
 }
 
+
+/*adjust the position between music section and its picture*/
 .music .m_img{
 	
 	margin-top: 15px;
 	margin-left: 10px;
-	float: left;
+	float: left;  
 	
 }
 
+
+/*adjust the position between music section and text*/
 .music .m_text{
 	
 	float: left;
@@ -95,16 +113,16 @@ body{
 	
 }
 
-
+/*let all the a label move together,   fix the position of three buttons */
+/* absolute position to prevent the change of three buttons if the song name is longer */
 .music .m_btn{
 	float: left;
-	position: absolute;
+	position: absolute;   
 	left: 300px;
-	
 }
 
 
-
+/*define the last song, play, next song buttons in the music section */
 .music .m_btn a{
 	float: left;
 	width: 35px;
@@ -114,28 +132,33 @@ body{
 	margin-left: 20px;
 }
 
+/* change the position of background picture, to get the shap of previous song */
+.music .m_btn .m_prev{background-position: -206px -631px;}     /*position of last song */
+.music .m_btn .m_prev:hover {background-position: -206px -631px;}     /*when the mouse is hovering over the label, the coloer is changed */
 
-.music .m_btn .m_prev{background-position: -206px -631px;}
-.music .m_btn .m_prev:hover {background-position: -206px -631px;}
-
+/* get the shape of play&pause */
 .music .m_btn .m_play{background-position: -431px -631px;}
 .music .m_btn .m_play:hover{background-position: -431px -631px;}
 
 .music .m_btn .m_next{background-position: -363px -631px;}
 .music .m_btn .m_next:hover{background-position: -363px -631px;}
 
+
+/*set the open/close layout of the music section at the bottom left*/
 .music .m_close{
 	float: right;
 	background: url(../mp3/player%20interface.PNG);
 	width: 23px;
 	height: 120px;
 	margin-top: -18px;
-	cursor: pointer; 
+	cursor: pointer;     /*  mouse change to hand shape */
 	
 }
 
 
+/* when the play button was changed to "stop", display the color and shape,  in the html, it is still m_play,  use JS to change from m_play to m_pause  */
 .music .m_btn .m_pause{background-position: -285px -632px;}
 
 
+/* hide or display the music section */
 .music .m_open{background-position: -116px -229px;}

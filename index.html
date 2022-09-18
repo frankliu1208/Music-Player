@@ -3,69 +3,79 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>LoveInMusic</title>
-		<link rel="stylesheet" type="text/css" href="css/Music.css"/>
-		
+		<link rel="stylesheet" type="text/css" href="css/Music.css"/>		
 	</head>
+
 	<body>
-		<!-- banner begin    -->
-		<div class="banner">
+		<!--           banner begin         -->
+		
+		<div class="banner">       
 			<ul>
 				<li class="m1"   datasrc="mp3/1.mp3"  title="song1">
 					<img src="img/1.jpg" width="65" >
 				</li>
 				<li  class="m2" datasrc="mp3/2.mp3"  title="song2">
 					<img src="img/2.jpg" width="90">
-				</li>
+				</li>  
 				<li class="m3"   datasrc="mp3/3.mp3"  title="song3">
 					<img src="img/3.jpg" width="119">				
 				</li>
 				<li class="m4" datasrc="mp3/4.mp3" title="song4">
 					<img src="img/4.jpg" width="90">
 				</li>
-				<li class="m5"     datasrc="mp3/5.mp3"  title="song5">
+				<li class="m5"   datasrc="mp3/5.mp3"  title="song5">
 					<img src="img/5.jpg" width="65" >
 				</li>
 				
-			</ul>
+			</ul>     
 			
 		</div>
-		<!-- banner end    -->
+		<!--         banner end          -->
 		
 		
 		
 		
-		<!-- Music begin    -->
+		<!-- Music begin , music section located at bottom left area   -->
 		
 		<div class="music">
+			<!-- below 3 child div, one is the pic, second is the song name, third is three buttons    -->
 			<div class="m_img">
-				<img src="img/1.jpg" width="90" />
-				
+				<img src="img/1.jpg" width="90" />		
 			</div>
+
 			<div class="m_test">
 				song1
 			</div>
+
 			<div class="m_btn">
 				<a href="#" class="m_prev" title="previous song"></a>
 				<a href="#" class="m_play" title="play the song"></a>
 				<a href="#" class="m_next" title="next song"></a>
 			</div>
-			<div class="m_close m_open ">
+
+
+
+<!-- below div is the extendable unit, which can hide the music section -->
+			<div class="m_close m_open ">  </div> 	
+
+			<!-- using JQuery to get the value of datasrc property, and replace the src in audio tag    -->				    
 			<audio src="mp3/1.mp3"class="m_mp3">
-				The current browser supports audio
+				The current browser doess not supports audio
 			</audio>
-			</div>
-			
-		
+					
 		</div>
-		
-		<!-- Music end    -->
+		<!--               Music end                    -->
+
+
+
 		
 		<script type="text/javascript" src="js/jquery-3.6.0.js">
 		</script>
 		
-		<script type="text/javascript" src="js/music.js">
-			
+		<script type="text/javascript" src="js/music.js">		
 		</script>
+
+		<script src="https://kit.fontawesome.com/c2a154e786.js" crossorigin="anonymous"></script>
 		
 		
 	</body>
